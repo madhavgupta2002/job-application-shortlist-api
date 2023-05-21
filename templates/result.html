@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Tone Analyzer Result</title>
+    <script src="https://kit.fontawesome.com/989a47dfe5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <style>
+
+.image-row {
+  display: flex;
+  justify-content: center;
+}
+
+.image-col {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.image-col img {
+  max-width: 100%;
+}
+
+.caption {
+  margin-top: 5px;
+}
+
+#topnav {
+  padding-bottom: 30px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #16182b;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  margin: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#back {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+  background-color: #9ee157;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-bottom: 100px;
+  width: 60%;
+}
+
+#back:hover {
+  background-color: #55ff00;
+  border: 2px solid #00ffcc;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 30px auto;
+  width: 40%;
+  height: 30px;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  resize: both;
+}
+
+#contact {
+  background-color: #1d1f38;
+  padding: 10px;
+}
+
+#extra2 {
+  display: flex;
+  color: white;
+  width: 60%;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  justify-content: space-evenly;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  border: 4px solid #04ffbc;
+  border-radius: 10px;
+}
+
+.logo {
+  margin-left: auto;
+}
+
+    </style>
+  </head>
+  <body>
+
+
+
+
+
+    <div class="topnav">
+      <a class="active" href="#home">
+        <i class="fa-solid fa-house"></i>
+        Home</a>
+      <a href="#contact">Credits</a>
+      <h2 style="margin-right:100px">API PROJECT</h2>
+
+      <!-- <input type="text" placeholder="Search.."> -->
+    </div>
+
+    <h1>JOB APPLICATION SHORTLISTING RESULT</h1>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Result:</strong> {{ result }}</p>
+    <a href="/" id="back">Back to home</a>
+
+    <hr>
+    <h1 id="contact" >CREDITS </h1><br>
+
+    <div class="image-row">
+      <div class="image-col">
+        <img src="{{ url_for('static', filename='madhav.jpg') }}" alt="madhav" width="300" height="300">
+        <p class="caption" style="font-family: Arial"><strong>Madhav Gupta (2K21/CO/262)</strong></p>
+      </div>
+    </div>
+
+    </body>
+</html>

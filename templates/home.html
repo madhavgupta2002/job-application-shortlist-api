@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Tone Analyzer</title>
+    <script src="https://kit.fontawesome.com/989a47dfe5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <style>
+.image-row {
+  display: flex;
+  justify-content: center;
+}
+
+.image-col {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.image-col img {
+  max-width: 100%;
+}
+
+.caption {
+  margin-top: 5px;
+}
+
+.logo {
+  margin-left: auto;
+}
+
+    </style>
+
+
+      </head>
+      <body> 
+        
+
+        <div class="topnav">
+          <a class="active" href="#home">
+            <i class="fa-solid fa-house"></i>
+            Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Credits</a>
+
+            <h2 style="margin-right:100px">API PROJECT</h2>
+        </div>
+
+        
+        <h1> <i class="fa-solid fa-envelope"></i>  JOB APPLICATION SHORTLISTING</h1>
+        <form method="POST" action="/result">
+          <label for="email">Application:</label>  <br><br>
+  
+          <!-- <input type="text" id="email" name="email" /> -->
+          <textarea id="email" name="email" rows="10" cols="50"></textarea>  <br><br>
+          
+          <button type="submit">Analyze</button>
+        </form>
+ <hr>
+
+        <h1 id="about" >ABOUT </h1>
+        <h6 id =extra style="font-family: Verdana " align=”justify”>
+          This is a web tool that uses AI to detect the tone of a job application and determine whether
+           it is a formal  application or not. By analyzing various linguistic features 
+           such as sentence structure, word choice, and grammar, the tool can accurately 
+           identify the tone of an email and provide useful insights to recruiters and HR 
+           personnel. This NLP technology has the potential to streamline the hiring process 
+           and help enterprises quickly identify the most qualified candidates. With its ability 
+           to efficiently sort through job applications, the tool can save valuable time and resources 
+           while making the hiring process more effective.
+           <br>
+           The Tone Detection Web Tool is an innovative solution for enterprises seeking to 
+           streamline the hiring process and identify the most qualified candidates. This tool
+            uses advanced AI algorithms to analyze the tone and communication style of job applications 
+            and identify whether an email is a formal job application or not.
+
+
+        </h6>
+
+        <hr>
+        <h1 id="contact" >CREDITS </h1><br>
+
+        <div class="image-row">
+          <div class="image-col">
+            <img src="{{ url_for('static', filename='madhav.jpg') }}" alt="madhav" width="300" height="300">
+            <p class="caption" style="font-family: Arial"><strong>Madhav Gupta (2K21/CO/262)</strong></p>
+          </div>
+        </div>
+  
+</html>
